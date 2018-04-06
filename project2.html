@@ -4,7 +4,6 @@
 
 <link rel="stylesheet" href="css/game.css">
 <body>
-<script>
 .background    { background: rgb(52, 166, 251);
 
                  table-layout: fixed;
@@ -58,6 +57,8 @@
   box-shadow: -4px -7px 8px white, 4px -7px 8px white;
 
 }
+<script>
+
 
 var actorChars = {
   "@": Player,
@@ -551,9 +552,9 @@ Player.prototype.act = function(step, level, keys) {
 
 Level.prototype.playerTpouched = function(type, actor) {
   if (type == 'coin' || type == 'health') {
-    this.actors = this.actors.filter(function(other)) {
-	  return other != actor;
-	 });
+    this.actors = this.actors.filter(function(other){}); {
+	  return other != actor; 
+	 };
 	}
   };
 
@@ -584,9 +585,9 @@ Level.prototype.playerTpouched = function(type, actor) {
 
     this.size.y -= step;
 
-  }
+  };
 
-};
+
 
 
 
@@ -628,11 +629,12 @@ Level.prototype.playerTouched = function(type, actor) {
 
   }
 else if (type == "health") {
-  this.actors = this.actors.filter(function(other)) {
-   }};
+  this.actors = this.actors.filter(function(other){}) 
+   
+  };
       this.player.health++;
-  }
-};
+  };
+
 
 
 // Arrow key codes for readibility
@@ -869,7 +871,7 @@ function runGame(plans, Display) {
   startLevel(0);
 }
 
-var GAME_LEVELS = [
+var GAME_LEVELS = 
   [
 "x                                         oy                                   x",
 "x                                                                              x" ,
@@ -912,7 +914,7 @@ var GAME_LEVELS = [
 " x   x      x   x   x        x     x   xx  x x                                   x",
 " x   x      x   x   xxxx     xxxx  x   xx  xx                                    x",
 " x @                                                                             x",
-" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx!^!xxxxxxx!^!xxxxxxx!^!xxxxxx",  "]
+" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx!^!xxxxxxx!^!xxxxxxx!^!xxxxxx",  
 ];
 
 if (typeof module != "undefined" && module.exports)
